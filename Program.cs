@@ -35,7 +35,7 @@ try {
 
     Console.WriteLine("Done");
 }
-catch(Exception ex) {
+catch (Exception ex) {
     Console.WriteLine(ex.ToString());
 }
 
