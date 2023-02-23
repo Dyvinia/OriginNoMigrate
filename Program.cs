@@ -8,7 +8,7 @@ Console.WriteLine("Killing Origin and EA Desktop");
 foreach (Process process in Process.GetProcessesByName("EADesktop")) process.Kill();
 foreach (Process process in Process.GetProcessesByName("Origin")) process.Kill();
 
-string path = @"C:\ProgramData\Origin\local.xml";
+string path = @"%PROGRAMDATA%\Origin\local.xml";
 string newSetting = "  <Setting value=\"true\" key=\"MigrationDisabled\" type=\"1\"/>";
 
 try {
