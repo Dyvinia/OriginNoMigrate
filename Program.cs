@@ -16,12 +16,12 @@ try {
     List<string> fileLines = new(File.ReadAllLines(path));
 
     // remove xml closer (and any accidental duplicates of it)
-    foreach (string line in fileLines.FindAll(l => l == "</Settings>")) {
+    foreach (string line in fileLines.FindAll(l => l.Equals("</Settings>"))) {
         fileLines.Remove(line);
     }
 
     // remove duplicates of new setting
-    foreach (string line in fileLines.FindAll(l => l == newSetting)) {
+    foreach (string line in fileLines.FindAll(l => l.Equals(newSetting))) {
         fileLines.Remove(line);
     }
 
