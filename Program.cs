@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Reflection;
 using Microsoft.Win32;
 
-// die :3
+// Kill Origin/EA Desktop
 Console.WriteLine("Killing Origin and EA Desktop");
 foreach (Process process in Process.GetProcessesByName("EADesktop")) process.Kill();
 foreach (Process process in Process.GetProcessesByName("Origin")) process.Kill();
@@ -62,6 +61,7 @@ catch {
     Environment.Exit(0);
 }
 
+// Disable EA App Migration
 try {
     Console.WriteLine($"Opening {path}");
     List<string> fileLines = new(File.ReadAllLines(path));
