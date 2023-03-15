@@ -11,5 +11,5 @@ Original Method by [p0358](https://twitter.com/p0358/status/1626811868412010497)
 
 ### [Download the latest release](https://github.com/Dyvinia/OriginNoMigrate/releases)
 
-1. Install Origin v10.5.118.52644: https://download.dm.origin.com/origin/live/OriginSetup.exe
+1. Install Origin v10.5.118.52644: https://drive.google.com/file/d/15n3z_6-4P5d56y2y8s0UbWHgaheBi2a4
 2. Run OriginNoMigrate
