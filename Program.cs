@@ -10,7 +10,8 @@ foreach (Process process in Process.GetProcessesByName("EADesktop")) process.Kil
 foreach (Process process in Process.GetProcessesByName("Origin")) process.Kill();
 
 string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), @"Origin\local.xml");
-string newSetting = "  <Setting value=\"true\" key=\"MigrationDisabled\" type=\"1\"/>";
+string migrationSetting = "  <Setting value=\"true\" key=\"MigrationDisabled\" type=\"1\"/>";
+string autoUpdateSetting = "  <Setting value=\"true\" key=\"AutoUpdate\" type=\"1\"/>";
 string originPath = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\WOW6432Node\Origin")?.GetValue("OriginPath")?.ToString();
 
 
@@ -72,12 +73,23 @@ try {
     }
 
     // remove duplicates of new setting
-    foreach (string line in fileLines.FindAll(l => l.Equals(newSetting))) {
+    foreach (string line in fileLines.FindAll(l => l.Equals(migrationSetting))) {
+        fileLines.Remove(line);
+    }
+    
+    // disable Auto Updates
+    foreach (string line in fileLines.FindAll(l => l.Equals(autoUpdateSetting))) {
+        fileLines.Remove(line);
+    }
+
+    // remove duplicates of disabled auto update
+    foreach (string line in fileLines.FindAll(l => l.Equals(autoUpdateSetting.Replace("true", "false")))) {
         fileLines.Remove(line);
     }
 
     // add stuff
-    fileLines.Add(newSetting);
+    fileLines.Add(migrationSetting);
+    fileLines.Add(autoUpdateSetting.Replace("true", "false"));
     fileLines.Add("</Settings>");
 
     // write new text
