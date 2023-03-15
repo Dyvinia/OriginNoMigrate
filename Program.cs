@@ -23,7 +23,7 @@ try {
     // Origin is too recent
     if (originVersion.CompareTo(finalVersion) >= 0) {
         Console.WriteLine("You must install an older version of Origin");
-        Console.WriteLine("Origin v10.5.118.52644: https://cdn.discordapp.com/attachments/1054968664807452812/1085342027383832627/OriginSetup.exe");
+        Console.WriteLine("Origin v10.5.118.52644: https://download.dm.origin.com/origin/live/OriginSetup.exe");
 
         Console.Write("Press Enter to Close This Window...");
         Console.ReadLine();
