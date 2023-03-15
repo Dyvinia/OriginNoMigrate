@@ -1,5 +1,9 @@
 # OriginNoMigrate
 
+### Update: Use [StayOnOrigin](https://github.com/Dyvinia/StayOnOrigin) Instead
+
+___
+
 Prevents the migration popup in Origin from appearing 
 
 <img src="https://user-images.githubusercontent.com/13797470/225176539-4976f890-d7d0-4e1e-bae5-74a70cc42551.png" width=400/>
