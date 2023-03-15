@@ -12,6 +12,7 @@
 	<Version>1.1.0</Version>
 	<Copyright>Copyright © 2023 Dyvinia</Copyright>
 	<Company>Dyvinia</Company>
+	<ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <ItemGroup>
