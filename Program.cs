@@ -34,7 +34,7 @@ catch (Exception ex) {
     Console.WriteLine(ex.ToString());
 }
 
-
+// Prevent Origin from updating itself
 try {
     string originSetupInternal = originPath.Replace("Origin.exe", "OriginSetupInternal.exe");
     string originThinSetupInternal = originPath.Replace("Origin.exe", "OriginThinSetupInternal.exe");
@@ -54,7 +54,6 @@ catch {
     Console.Write("Press Any Key to Continue...");
     Console.ReadKey();
 
-    // No need for arguments since it can only reach this code if there are no arguments
     Process.Start(new ProcessStartInfo {
         FileName = Environment.ProcessPath,
         UseShellExecute = true,
