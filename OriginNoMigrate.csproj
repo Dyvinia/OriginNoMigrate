@@ -2,14 +2,14 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <PublishAot>true</PublishAot>
     <ApplicationIcon>icon.ico</ApplicationIcon>
 	  
 	<AssemblyName>OriginNoMigrate</AssemblyName>
-	<Version>1.0.1</Version>
+	<Version>1.1.0</Version>
 	<Copyright>Copyright © 2023 Dyvinia</Copyright>
 	<Company>Dyvinia</Company>
   </PropertyGroup>
